@@ -8,11 +8,16 @@ type ButtonProps = {
   loading?: boolean;
   className?: string;
   theme?: string;
+  variant?: string;
+  size?: 'sm' | 'md' | 'lg';
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   type?: 'submit' | 'button' | 'reset';
 } & HTMLAttributes<HTMLButtonElement>;
 
-const GLOBAL_THEMES = {
+const defaultClass =
+  'focus:outline-none text-center text-sm font-bold outline-white w-44 text-cyan-primary rounded-full';
+
+const variants = {
   blank: '',
   primary: 'bg-white text-cyan-primary border border-cyan-primary hover:shadow-button-default',
   secondary: 'bg-cyan-primary text-white hover:bg-cyan-shaded',
@@ -23,23 +28,30 @@ const GLOBAL_THEMES = {
   inactive: 'bg-gris-perla text-dark-grey',
 };
 
+const sizes = {
+  sm: 'py-2 px-4 text-sm',
+  md: 'px-3.5 py-2 text-md',
+  lg: 'py-3 px-8 text-lg',
+};
+
 const Button = ({
   children,
   className = '',
   loading = false,
   disabled = false,
-  theme = 'primary',
+  variant = 'primary',
+  theme = 'Paris',
   onClick,
   type = 'submit',
-  ...rest
+  size = 'md',
 }: ButtonProps): JSX.Element => {
   return (
     <button
       type={type}
       onClick={onClick}
-      className={`rounded-3xl font-bold py-2 px-5 ${
-        theme && !disabled ? GLOBAL_THEMES[theme] : GLOBAL_THEMES['inactive']
-      }
+      className={`${defaultClass}
+      ${variant && !disabled ? variants[variant] : variants['inactive']}
+      ${sizes[size]}
       ${loading ? 'btn--loading' : ''}
       ${className}`}
     >
@@ -54,5 +66,6 @@ const Button = ({
     </button>
   );
 };
+
 export { ButtonProps };
 export default Button;

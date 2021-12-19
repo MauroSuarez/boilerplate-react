@@ -17,4 +17,5 @@ Primary.args = {
   theme: 'primary',
   disabled: false,
   loading: false,
+  size: 'md',
 };
