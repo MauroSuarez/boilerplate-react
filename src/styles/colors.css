@@ -1,0 +1,51 @@
+:root {
+  /* Gamification pallet colors  */
+  --basic-sky: #2882c7;
+  --blue-indigo: #00355b;
+  --purple-blue: #5167ae;
+  --purple-dark: #892e5a;
+  --purple-solid: #794d94;
+  --purple-strong: #a2327b;
+
+  /* User Levels */
+  --basic-level: #00856a;
+  --intermediate-level: #228091;
+  --advanced-level: #5e5ef7;
+  --expert-level: #541ccc;
+  --preferential-level: #3e4f5b;
+  --elite-level: #00355b;
+
+  /* Default colors */
+  --basic-gray: #eaeaea;
+  --back-gray: #f9f9f9;
+  --btn-indigo: #00355b;
+  --cyan-primary: #009ce0;
+  --cyan-shaded: #007db3;
+  --gris-claro: #aaaaaa;
+  --gris-perla: #f2f2f2;
+  --black: #1a1a1a;
+  --daisygray: #f8f8f8;
+  --silver: #4d4d4d;
+  --green: #009372;
+  --blackfont: #1a1a1a;
+  --light-blue: #e6f5fc;
+  --badge-gray: #d2d2d2;
+  --white: #ffff;
+  --commongray: #dbdbdb;
+  --nobel: #999;
+  --skyblue: #00b0eb;
+  --slate-light-blue: #e0f2fa;
+  --red: #ff5c5c;
+  --orange-border-alert: #e96716;
+  --error-red: #ee595a;
+  --success-green: #009372;
+  --bg-green: #e6f4f1;
+  --magenta: #ca1862;
+  --cyan-strong: #008fcc;
+  --dark-gray: #818180;
+  --magenta-pastel: #f9e4ed;
+  --indigo-pastel: #e1eaf0;
+  --terra: #fef6f0;
+  --theme-common-white: #ffffff;
+  --theme-palette-grey-light: #efefef;
+}

@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
+import './Button.scss';
 import { Spinner } from '@/components/Elements/Spinner';
 
 const variants = {
