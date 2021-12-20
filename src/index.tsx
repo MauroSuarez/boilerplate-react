@@ -10,7 +10,7 @@ initMocks();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App defaultTheme="paris" />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -7,30 +7,29 @@ type ButtonProps = {
   disabled?: boolean;
   loading?: boolean;
   className?: string;
-  theme?: string;
   variant?: string;
   size?: 'sm' | 'md' | 'lg';
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   type?: 'submit' | 'button' | 'reset';
 } & HTMLAttributes<HTMLButtonElement>;
 
-const defaultClass =
-  'focus:outline-none text-center text-sm font-bold outline-white w-44 text-cyan-primary rounded-full';
+const defaultClass = 'focus:outline-none open-sans text-center font-bold w-44 rounded-full';
 
 const variants = {
   blank: '',
-  primary: 'bg-white text-cyan-primary border border-cyan-primary hover:shadow-button-default',
+  primary:
+    'bg-primary-background text-cyan-primary border outline-white border-cyan-primary hover:shadow-button-default',
   secondary: 'bg-cyan-primary text-white hover:bg-cyan-shaded',
   tertiary: 'bg-btn-indigo text-white',
   quaternary: 'bg-white text-btn-indigo border border-btn-indigo,',
   quinary: 'bg-white text-btn-indigo border border-btn-indigo,',
-  link: 'underline text-btn-indigo font-bold text-sm',
+  link: 'underline text-btn-indigo font-bold',
   inactive: 'bg-gris-perla text-dark-grey',
 };
 
 const sizes = {
-  sm: 'py-2 px-4 text-sm',
-  md: 'px-3.5 py-2 text-md',
+  sm: 'py-2 px-4 text-xs',
+  md: 'px-3.5 py-2 text-sm',
   lg: 'py-3 px-8 text-lg',
 };
 
@@ -40,7 +39,6 @@ const Button = ({
   loading = false,
   disabled = false,
   variant = 'primary',
-  theme = 'Paris',
   onClick,
   type = 'submit',
   size = 'md',
@@ -52,7 +50,7 @@ const Button = ({
       className={`${defaultClass}
       ${variant && !disabled ? variants[variant] : variants['inactive']}
       ${sizes[size]}
-      ${loading ? 'btn--loading' : ''}
+      ${loading ? sizes[size] + ` loading btn-${variant}` : ''}
       ${className}`}
     >
       {loading && (

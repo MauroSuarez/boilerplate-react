@@ -1,9 +1,14 @@
-import { AppProvider } from '@/providers/app';
+import { AppProvider } from '@/providers';
 import { AppRoutes } from '@/routes';
+import { Theme } from '@/types/theme';
 
-function App() {
+type AppProps = {
+  defaultTheme: Theme;
+};
+
+function App({ defaultTheme }: AppProps) {
   return (
-    <AppProvider>
+    <AppProvider defaultTheme={defaultTheme}>
       <AppRoutes />
     </AppProvider>
   );

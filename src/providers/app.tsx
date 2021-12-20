@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
 import { QueryClientProvider } from 'react-query';
@@ -9,6 +9,9 @@ import { Button, Spinner } from '@/components/Elements';
 import { Notifications } from '@/components/Notifications/Notifications';
 import { AuthProvider } from '@/lib/auth';
 import { queryClient } from '@/lib/react-query';
+import { DEFAULT_THEME } from '@/themes';
+import { Theme } from '@/types/theme';
+import { applyTheme } from '@/utils/theme';
 
 const ErrorFallback = () => {
   return (
@@ -26,9 +29,17 @@ const ErrorFallback = () => {
 
 type AppProviderProps = {
   children: React.ReactNode;
+  defaultTheme: Theme;
 };
 
-export const AppProvider = ({ children }: AppProviderProps) => {
+export const AppProvider = ({ defaultTheme, children }: AppProviderProps) => {
+  const [theme, setTheme] = useState<string>(DEFAULT_THEME);
+
+  useEffect(() => {
+    applyTheme(theme);
+    setTheme(defaultTheme);
+  }, [theme, defaultTheme, setTheme]);
+
   return (
     <React.Suspense
       fallback={
