@@ -28,7 +28,6 @@ export const extend: (extending: ITheme, newTheme: ITheme) => ITheme = (
   extending: ITheme,
   newTheme: ITheme
 ): ITheme => {
-  console.log(extending, newTheme, 'THEMEMEMEME');
   return { ...extending, ...newTheme };
 };
 
