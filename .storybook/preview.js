@@ -6,7 +6,7 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
 };
 
-const defaultTheme = 'easy';
+const defaultTheme = 'paris';
 
 export const decorators = [
   (Story) => (

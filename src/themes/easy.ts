@@ -3,7 +3,11 @@ import { extend } from '../utils/theme';
 import base from './base';
 
 export default extend(base, {
-  backgroundPrimary: '#e74c3c',
-  backgroundSecondary: '#7b7b7b',
-  textPrimary: '#fff',
+  backgroundPrimary: '#ED2424',
+  backgroundSecondary: '#FFEC13',
+  textPrimary: '#FFEC13',
+  textSecondary: '#ED2424',
+  borderPrimary: '#FFEC13',
+  borderSecondary: '#ED2424',
+  hoverBackgroundSecondary: '#FFEC13',
 });

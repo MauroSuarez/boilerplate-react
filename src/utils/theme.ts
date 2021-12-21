@@ -14,13 +14,15 @@ export interface IMappedTheme {
 
 export const mapTheme: (variables: ITheme) => IMappedTheme = (variables: ITheme) => {
   return {
-    '--color-primary': variables.primary || '',
-    '--color-secondary': variables.secondary || '',
-    '--color-positive': variables.positive || '',
-    '--color-negative': variables.negative || '',
-    '--color-text-primary': variables.textPrimary || '',
-    '--background-primary': variables.backgroundPrimary || '',
-    '--background-sec': variables.backgroundSecondary || '',
+    '--color-primary': variables.primary || '', // DEFAULT COLOR THEME
+    '--color-secondary': variables.secondary || '', // DEFAULT COLOR THEME
+    '--btn-background-primary': variables.backgroundPrimary || '',
+    '--btn-background-secondary': variables.backgroundSecondary || '',
+    '--btn-text-primary': variables.textPrimary || '',
+    '--btn-text-secondary': variables.textSecondary || '',
+    '--btn-border-primary': variables.borderPrimary || '',
+    '--btn-border-secondary': variables.borderSecondary || '',
+    '--btn-hover-background-secondary': variables.hoverBackgroundSecondary || '',
   };
 };
 

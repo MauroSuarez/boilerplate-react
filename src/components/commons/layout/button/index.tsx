@@ -7,10 +7,10 @@ type ButtonProps = {
   disabled?: boolean;
   loading?: boolean;
   className?: string;
-  variant?: string;
+  variant?: 'blank' | 'primary' | 'secondary' | 'link';
   size?: 'sm' | 'md' | 'lg';
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   type?: 'submit' | 'button' | 'reset';
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 } & HTMLAttributes<HTMLButtonElement>;
 
 const defaultClass = 'focus:outline-none open-sans text-center font-bold w-44 rounded-full';
@@ -18,19 +18,17 @@ const defaultClass = 'focus:outline-none open-sans text-center font-bold w-44 ro
 const variants = {
   blank: '',
   primary:
-    'bg-primary-background text-cyan-primary border outline-white border-cyan-primary hover:shadow-button-default',
-  secondary: 'bg-cyan-primary text-white hover:bg-cyan-shaded',
-  tertiary: 'bg-btn-indigo text-white',
-  quaternary: 'bg-white text-btn-indigo border border-btn-indigo,',
-  quinary: 'bg-white text-btn-indigo border border-btn-indigo,',
+    'bg-btn-background-primary text-btn-text-primary border border-btn-border-primary hover:shadow-button-default',
+  secondary:
+    'bg-btn-background-secondary text-btn-text-secondary border border-btn-border-secondary hover:bg-btn-hover-background-secondary',
   link: 'underline text-btn-indigo font-bold',
   inactive: 'bg-gris-perla text-dark-grey',
 };
 
 const sizes = {
-  sm: 'py-2 px-4 text-xs',
+  sm: 'py-2 px-1 text-xs',
   md: 'px-3.5 py-2 text-sm',
-  lg: 'py-3 px-8 text-lg',
+  lg: 'py-4 px-4 text-lg',
 };
 
 const Button = ({
