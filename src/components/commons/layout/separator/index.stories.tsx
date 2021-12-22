@@ -1,21 +1,20 @@
 import { Meta, Story } from '@storybook/react';
 
-import Panel, { PanelProps } from './';
+import Separator, { SeparatorProps } from '.';
 
 const meta: Meta = {
-  title: 'Components/Commons/Layout/Panel',
-  component: Panel,
+  title: 'Components/Commons/Layout/Separator',
+  component: Separator,
   parameters: {
     controls: { expanded: true },
   },
 };
 
 export default meta;
-const Template: Story<PanelProps> = (args) => <Panel {...args} />;
+const Template: Story<SeparatorProps> = (props) => <Separator {...props} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  children: 'Panel',
   classes: '',
-  variant: '2',
+  variant: 'primary',
 };

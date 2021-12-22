@@ -1,12 +1,13 @@
 // import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
+import { overrideTailwindClasses } from 'tailwind-override';
 import './index.scss';
 
 type ButtonProps = {
   children: string | React.ReactNode;
   disabled?: boolean;
   loading?: boolean;
-  className?: string;
+  classes?: string;
   variant?: 'blank' | 'primary' | 'secondary' | 'link';
   size?: 'sm' | 'md' | 'lg';
   type?: 'submit' | 'button' | 'reset';
@@ -33,7 +34,7 @@ const sizes = {
 
 const Button = ({
   children,
-  className = '',
+  classes = '',
   loading = false,
   disabled = false,
   variant = 'primary',
@@ -45,11 +46,11 @@ const Button = ({
     <button
       type={type}
       onClick={onClick}
-      className={`${defaultClass}
+      className={overrideTailwindClasses(`${defaultClass}
       ${variant && !disabled ? variants[variant] : variants['inactive']}
       ${sizes[size]}
       ${loading ? sizes[size] + ` loading btn-${variant}` : ''}
-      ${className}`}
+      ${classes}`)}
     >
       {loading && (
         <>

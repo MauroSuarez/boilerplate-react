@@ -14,9 +14,9 @@ const Template: Story<ButtonProps> = (props) => <Button {...props} />;
 export const Primary = Template.bind({});
 Primary.args = {
   children: 'Primary Button',
-  theme: '',
   variant: 'primary',
   disabled: false,
   loading: false,
   size: 'md',
+  classes: '',
 };
