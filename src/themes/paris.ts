@@ -9,5 +9,6 @@ export default extend(base, {
   textSecondary: '#ffffff',
   borderPrimary: '#009ce0',
   borderSecondary: '',
+  hoverBackgroundPrimary: '',
   hoverBackgroundSecondary: '#007db3',
 });

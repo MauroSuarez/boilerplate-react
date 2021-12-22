@@ -15,9 +15,9 @@ const meta: Meta = {
 export default meta;
 const Template: Story<PanelProps> = () => {
   return (
-    <PanelContainer>
-      <Panel variant={2}>Panel 1</Panel>
-      <Panel variant={1}>Panel 2</Panel>
+    <PanelContainer variant="cols">
+      <Panel variant={'2'}>Panel 1</Panel>
+      <Panel variant={'1'}>Panel 2</Panel>
     </PanelContainer>
   );
 };
@@ -26,5 +26,5 @@ export const Primary = Template.bind({});
 Primary.args = {
   children: '',
   className: '',
-  variant: 2,
+  variant: '2',
 };

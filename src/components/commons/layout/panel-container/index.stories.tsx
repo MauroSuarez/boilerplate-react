@@ -17,4 +17,6 @@ export const Primary = Template.bind({});
 Primary.args = {
   children: '',
   className: '',
+  variant: 'cols',
+  count: '3',
 };

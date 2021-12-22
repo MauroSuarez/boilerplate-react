@@ -14,14 +14,13 @@ export interface IMappedTheme {
 
 export const mapTheme: (variables: ITheme) => IMappedTheme = (variables: ITheme) => {
   return {
-    '--color-primary': variables.primary || '', // DEFAULT COLOR THEME
-    '--color-secondary': variables.secondary || '', // DEFAULT COLOR THEME
     '--btn-background-primary': variables.backgroundPrimary || '',
     '--btn-background-secondary': variables.backgroundSecondary || '',
     '--btn-text-primary': variables.textPrimary || '',
     '--btn-text-secondary': variables.textSecondary || '',
     '--btn-border-primary': variables.borderPrimary || '',
     '--btn-border-secondary': variables.borderSecondary || '',
+    '--btn-hover-background-primary': variables.hoverBackgroundPrimary || '',
     '--btn-hover-background-secondary': variables.hoverBackgroundSecondary || '',
   };
 };
@@ -44,7 +43,6 @@ export const applyTheme = (theme: string): void => {
   const themeObject: IMappedTheme = mapTheme(themes[theme]);
   if (!themeObject) return;
   const root = document.documentElement;
-
   Object.keys(themeObject).forEach((property) => {
     if (property === 'name') {
       return;
