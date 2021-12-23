@@ -8,7 +8,7 @@ type ButtonProps = {
   disabled?: boolean;
   loading?: boolean;
   classes?: string;
-  variant?: 'blank' | 'primary' | 'secondary' | 'link';
+  variant?: 'blank' | 'primary' | 'secondary';
   size?: 'sm' | 'md' | 'lg';
   type?: 'submit' | 'button' | 'reset';
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -22,13 +22,13 @@ const variants = {
     'bg-btn-background-primary text-btn-text-primary border border-btn-border-primary hover:shadow-button-default',
   secondary:
     'bg-btn-background-secondary text-btn-text-secondary border border-btn-border-secondary hover:bg-btn-hover-background-secondary',
-  link: 'underline text-btn-indigo font-bold',
+  // link: 'underline text-btn-indigo font-bold',
   inactive: 'bg-gris-perla text-dark-grey',
 };
 
 const sizes = {
   sm: 'py-2 px-1 text-xs',
-  md: 'px-3.5 py-2 text-sm',
+  md: 'px-3.5 py-2 text-sm h-10',
   lg: 'py-4 px-4 text-lg',
 };
 

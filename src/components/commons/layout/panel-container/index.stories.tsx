@@ -31,7 +31,7 @@ const Template: Story<PanelContainerProps> = () => {
             variant={'1'}
             title={<p className="text-xs">Medio de pago</p>}
             separator="primary"
-            classes="grid-cols-1 items-start lg:mt-0 md:mt-0 sm:mt-0 mt-4"
+            classes="grid-cols-1 items-start lg:mt-0 md:mt-0 sm:mt-0 mt-4 lg:bg-white md:bg-white sm:bg-white bg-gray-600"
           >
             Panel right 2
           </Panel>

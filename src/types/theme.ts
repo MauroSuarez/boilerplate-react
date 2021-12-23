@@ -1,3 +1,4 @@
+// Deprecated
 export type Theme = 'paris' | 'easy';
 
 export type TButton = {
@@ -41,14 +42,10 @@ export type TLink = {
 };
 
 export type TLabelStatus = {
-  textSuccess?: string;
-  textInfo?: string;
-  textWarning?: string;
-  textError?: string;
-  backgroundSuccess?: string;
-  backgroundWarning?: string;
-  backgroundInfo?: string;
-  backgroundError?: string;
+  success?: string;
+  info?: string;
+  warning?: string;
+  error?: string;
 };
 
 export type TPagination = {
