@@ -74,6 +74,13 @@ export type TTimeLine = {
 };
 
 export type TAlert = {
+  success?: string;
+  info?: string;
+  warning?: string;
+  error?: string;
+};
+
+export type TToast = {
   backgroundPrimary?: string;
   backgroundSecondary?: string;
   backgroundTertiary?: string;
@@ -141,4 +148,5 @@ export interface ITheme {
   modals?: TModal;
   typographys?: TTypography;
   separators?: TSeparator;
+  toast?: TToast;
 }

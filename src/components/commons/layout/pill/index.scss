@@ -1,0 +1,22 @@
+.stateFilter {
+  max-width: 90vw;
+}
+
+.stateFilter::-webkit-scrollbar {
+  display: none;
+}
+
+.statePill {
+  // font-family: Open Sans;
+  padding: 5px 10px;
+  border: 1px solid #818180 !important;
+  border-radius: 16px;
+  color: #4d4d4d;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.statePill--selected {
+  @extend .statePill;
+  border-color: #009ce0 !important;
+}
