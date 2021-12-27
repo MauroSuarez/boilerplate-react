@@ -1,0 +1,10 @@
+.toast-component {
+    &-show {
+        opacity: 1;
+        transition: visibility 0s, opacity 1s linear;
+    }
+    &-hidden {
+        opacity: 0;
+        transition: visibility 0s, opacity 1s linear;
+    }
+}

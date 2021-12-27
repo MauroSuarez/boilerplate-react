@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 
-import Separator, { SeparatorProps } from '.';
+import Separator, { SeparatorProps } from './';
 
 const meta: Meta = {
   title: 'Components/Commons/Layout/Separator',
